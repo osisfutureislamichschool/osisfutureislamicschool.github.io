@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSIS Future Islamic School</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #eaeaea;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(135deg, #007bff, #6c757d);
+            padding: 15px 30px;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .logo-os {
+            height: 60px;
+        }
+
+        .header-text {
+            position: absolute;
+            top: 15px;
+            right: 30px;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        h1, h2 {
+            color: #333;
+            font-weight: 600;
+        }
+
+        .about, .events {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .events-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .event-item {
+            margin-bottom: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .event-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f4f4f4;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+            transform: scale(1.01);
+        }
+
+        .info-container {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .info-container img {
+            width: 200px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .info-container p {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .event-description {
+            display: none;
+            margin-top: 20px;
+            font-style: italic;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            position: relative;
+            width: 100%;
+        }
+
+        .school-info {
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .about, .events {
+            animation: slideIn 0.5s ease-out;
+        }
+
+        .instagram-link {
+            display: flex;
+            align-items: center;
+        }
+
+        .instagram-link img {
+            width: 30px;
+            height: auto;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://i2.wp.com/salamadian.com/wp-content/uploads/2019/11/logo-osis-sma.png?ssl=1" alt="Logo OSIS" class="logo-os">
+        <div class="header-text">SEKOLAH FUTURE ISLAMIC SCHOOL</div>
+    </header>
+    <main>
+        <section class="about">
+            <h1>OSIS Future Islamic School</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Jabatan</th>
+                        <th>Nama</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-name="Nafiza Azzahra Permata" data-image="nafiza-azzahra-permata.jpg">
+                        <td>Ketua OSIS</td>
+                        <td>Nafiza Azzahra Permata</td>
+                    </tr>
+                    <tr data-name="Ahmad Syakir Alfazari" data-image="ahmad-syakir-alfazari.jpg">
+                        <td>Wakil Ketua OSIS</td>
+                        <td>Ahmad Syakir Alfazari</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="info-container" id="info-container">
+                <img id="info-image" src="" alt="">
+                <p id="info-name"></p>
+            </div>
+            <div class="vision-mission">
+                <h2>Visi</h2>
+                <p>Dapat menjadi siswa yang berprestasi, memiliki kemampuan sosial, dan dapat menetapkan siswa sebagai identitas yang memiliki tata krama, aktif dalam berpikir, penuh kreativitas, serta beradab, mengikuti perkembangan zaman dengan tetap berpegang pada iman dan ketakwaan.</p>
+                <h2>Misi</h2>
+                <ul>
+                    <li>Mendukung upaya sekolah untuk meningkatkan iman dan taqwa.</li>
+                    <li>Memastikan implementasi peraturan yang lebih efektif dan teratur.</li>
+                    <li>Meningkatkan kedisiplinan pada peraturan yang ada.</li>
+                    <li>Meningkatkan sikap aktif siswa dalam kegiatan pembelajaran maupun kegiatan ekstrakurikuler.</li>
+                    <li>Meningkatkan rasa peduli terhadap lingkungan sekolah.</li>
+                </ul>
+            </div>
+        </section>
+        <section class="events">
+            <div class="events-header">
+                <h2>Event Terbaru</h2>
+                <div class="instagram-link">
+                    <img src="https://1000logos.net/wp-content/uploads/2017/02/Instagram-Logo.png" alt="Instagram Logo">
+                    <span>@_officialosissmpfis : <a href="https://www.instagram.com/_officialosissmpfis/?hl=en" target="_blank">https://www.instagram.com/_officialosissmpfis/?hl=en</a></span>
+                </div>
+            </div>
+            <div class="event-item" data-description="Tujuan pembuatan lomba 17 Agustus 2024 adalah untuk memperingati kemerdekaan Republik Indonesia dengan melibatkan seluruh siswa dalam berbagai lomba yang bertujuan mempererat tali persaudaraan dan meningkatkan semangat nasionalisme.">
+                <div>
+                    <h3>17 Agustus 2024: Perayaan Hari Kemerdekaan</h3>
+                    <p>Perayaan untuk memperingati Hari Kemerdekaan Republik Indonesia dengan berbagai kegiatan.</p>
+                </div>
+            </div>
+            <div class="event-item" data-description="Tujuan pembuatan acara Education Expo di Mall SKA PEKANBARU adalah untuk memberikan platform kepada pelajar dan masyarakat untuk mengeksplorasi berbagai informasi pendidikan dan peluang yang ada, serta memperluas wawasan tentang berbagai institusi pendidikan dan program-program yang tersedia.">
+                <div>
+                    <h3>Education Expo</h3>
+                    <p>Event pameran pendidikan yang menampilkan berbagai informasi dan kegiatan terkait pendidikan.</p>
+                </div>
+            </div>
+            <div class="event-description" id="event-description"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Future Islamic School. All rights reserved.</p>
+        <div class="school-info">
+            SEKOLAH FUTURE ISLAMIC SCHOOL<br>
+            🏫 : JI.Tuanku Tambusai Ujung, Kec. Payung Sekaki, Pekanbaru
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const rows = document.querySelectorAll('table tbody tr');
+            const infoContainer = document.getElementById('info-container');
+            const infoImage = document.getElementById('info-image');
+            const infoName = document.getElementById('info-name');
+
+            const eventItems = document.querySelectorAll('.event-item');
+            const eventDescription = document.getElementById('event-description');
+
+            rows.forEach(row => {
+                row.addEventListener('click', () => {
+                    const name = row.getAttribute('data-name');
+                    const image = row.getAttribute('data-image');
+
+                    infoName.textContent = name;
+                    infoImage.src = `images/${image}`;
+                    infoContainer.style.display = 'block';
+                });
+            });
+
+            eventItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const description = item.getAttribute('data-description');
+                    eventDescription.textContent = description;
+                    eventDescription.style.display = 'block';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
